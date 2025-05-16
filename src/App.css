@@ -1,0 +1,268 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #282c34;
+}
+
+a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #21a1f1;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+.App {
+  padding: 2rem;
+  text-align: center;
+}
+/* Light Mode */
+body {
+  background-color: #E8F5E9; /* light green */
+  color: #004D40; /* dark teal */
+}
+.App-header {
+  background-color: #81D4FA; /* light blue */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.App-header h1 {
+  font-size: 2.5rem;
+  color: #00695C;
+  margin-bottom: 1rem;
+}
+.App-header img {
+  height: 50px;
+  margin: 0 1rem;
+  transition: transform 0.3s;
+}
+.App-header img:hover {
+  transform: scale(1.1);
+}
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px #64FFDA;
+}
+section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #ffffffc9;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 128, 128, 0.1);
+}
+ul {
+  list-style: none;
+}
+button {
+  background-color: #00897B;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #00695C;
+}
+/* FORM STYLES */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+input, textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem;
+  border: 1px solid #B2DFDB;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+/* Dark Mode Support */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.App-header.dark-mode {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .App-header {
+  background-color: #004D40;
+}
+body.dark-mode section {
+  background-color: #263238;
+  color: #E0F7FA;
+}
+body.dark-mode button {
+  background-color: #00ACC1;
+}
+body.dark-mode button:hover {
+  background-color: #00838F;
+}
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #37474F;
+  color: #E0F7FA;
+  border: 1px solid #0097A7;
+}
+
+/* Add styles for the slider toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+
+
+
