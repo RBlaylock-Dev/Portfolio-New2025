@@ -20,12 +20,12 @@ function App() {
         <label className="switch-label">Dark Mode</label>
         <h1>Robert Blaylock's Portfolio</h1>
       
-        <a href="https://github.com/rblaylock-dev" target="_blank"><img src="/Githublogo.png" alt="GitHub Logo"/></a><a href="https://www.linkedin.com/in/rblaylock286/" target="_blank"><img src="/linkedinlogo.png" alt="LinkedIn Logo"/></a>
+        <a href="https://github.com/rblaylock-dev" target="_blank"><img src="/Portfolio-New2025/Githublogo.png" alt="GitHub Logo"/></a><a href="https://www.linkedin.com/in/rblaylock286/" target="_blank"><img src="/Portfolio-New2025/linkedinlogo.png" alt="LinkedIn Logo"/></a>
         
       </header>
       <main>
         <section id="about-me">
-          <img src="/RB.jpg" alt="Robert Blaylock" className="profile-pic" />
+          <img src="/Portfolio-New2025/RB.jpg" alt="Robert Blaylock" className="profile-pic" />
           <h2>About Me</h2>
           <p>Welcome to my portfolio! I’m a full stack developer with a passion for building clean, efficient, and user-friendly web applications. I specialize in React-based front-end development and enjoy bringing ideas to life through code—from concept to deployment.
 
