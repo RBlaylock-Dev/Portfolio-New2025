@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [darkMode, setDarkMode] = useState(false);
-
+// code below is for the dark mode toggle
   useEffect(() => {
     document.body.className = darkMode ? 'dark-mode' : '';
   }, [darkMode]);
