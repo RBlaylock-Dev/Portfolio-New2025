@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import emailjs from 'emailjs-com'; // Import Email.js
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,6 +11,30 @@ function App() {
   useEffect(() => {
     document.body.className = darkMode ? 'dark-mode' : '';
   }, [darkMode]);
+
+  const sendEmail = (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    emailjs
+      .sendForm(
+        'service_rzqitnh', // Replace with your Email.js service ID
+        'template_dq5vvv8', // Replace with your Email.js template ID
+        e.target,
+        'rblaylock.prsvr@gmail.com' // Replace with your Email.js user ID (or public key)
+      )
+      .then(
+        (result) => {
+          console.log('Email sent successfully:', result.text);
+          alert('Message sent successfully!');
+        },
+        (error) => {
+          console.error('Error sending email:', error.text);
+          alert('Failed to send message. Please try again.');
+        }
+      );
+
+    e.target.reset(); // Reset the form fields
+  };
 
   return (
     <div className="App">
@@ -59,7 +84,7 @@ function App() {
         </section>
         <section id="contact">
           <h2>Contact Me</h2>
-          <form>
+          <form onSubmit={sendEmail}>
             <label htmlFor="name">Name:</label>
             <input type="text" id="name" name="name" required />
 
