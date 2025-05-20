@@ -20,7 +20,7 @@ function App() {
         'service_rzqitnh', // Replace with your Email.js service ID
         'template_shja1cj', // Replace with your Email.js template ID
         e.target,
-        'rblaylock.prsvr@gmail.com' // Replace with your Email.js user ID (or public key)
+        'tFeA9cF5b62MYh6v_' // Replace with your Email.js user ID (or public key)
       )
       .then(
         (result) => {
