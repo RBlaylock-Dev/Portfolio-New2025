@@ -18,7 +18,7 @@ function App() {
     emailjs
       .sendForm(
         'service_rzqitnh', // Replace with your Email.js service ID
-        'template_dq5vvv8', // Replace with your Email.js template ID
+        'template_shja1cj', // Replace with your Email.js template ID
         e.target,
         'rblaylock.prsvr@gmail.com' // Replace with your Email.js user ID (or public key)
       )
